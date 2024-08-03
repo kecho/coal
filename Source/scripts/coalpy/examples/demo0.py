@@ -17,6 +17,7 @@ print("Current device: {}".format(info[1]))
 
 s1 = gpu.Shader(file="examples/testShader.hlsl", name="testShader") 
 
+iv = 10
 f = 0.5;
 f2 = 0.5;
 t = "hello"
@@ -32,7 +33,7 @@ test_image = gpu.Texture(file="examples/data/test.png")
 input_table = gpu.InResourceTable("testjpg_table", [test_image])
 
 def buildUi(imgui):
-    global f, f2, t, b, w
+    global iv, f, f2, t, b, w
     global sa, sb, sc
 
     imgui.begin_main_menu_bar()
@@ -52,6 +53,7 @@ def buildUi(imgui):
             imgui.button("some button2")
             f = imgui.slider_float("test slider", f, -1.0, 1.0);
             f2 = imgui.input_float("test float2", f2);
+            iv = imgui.slider_int("int val slider", iv, 10, 20);
             t = imgui.input_text("input text box", t);
             imgui.text("some standard text");
             b = imgui.checkbox("checkbox test", b)

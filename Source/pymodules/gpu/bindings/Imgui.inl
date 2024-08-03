@@ -116,6 +116,20 @@ COALPY_FN(slider_float, sliderFloat, R"(
         The new float value that the user set. Feed this value back on v on the next call to see a proper state update.
 )")
 
+COALPY_FN(slider_int, sliderInt, R"(
+    Draws a slider for an int value.
+
+    Parameters:
+        label (str): the label name for this slider.
+        v (int): the actual value to draw the slider.
+        v_min (int); the minimum possible value.
+        v_max (int): the maximum possible value.
+        fmt (str)(optional): A formatting value to draw the int. For example %d draws the int.
+
+    Returns:
+        The new int value that the user set. Feed this value back on v on the next call to see a proper state update.
+)")
+
 COALPY_FN(input_float, inputFloat, R"(
     Draws a box to input a single float value.
     

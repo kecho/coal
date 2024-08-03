@@ -161,6 +161,20 @@ PyObject* sliderFloat(PyObject* self, PyObject* vargs, PyObject* kwds)
     return PyFloat_FromDouble((double)v);
 }
 
+PyObject* sliderInt(PyObject* self, PyObject* vargs, PyObject* kwds)
+{
+    CHECK_IMGUI
+    char* label;
+    int v, v_min, v_max;
+    char* fmt = "%d";
+    static char* argnames[] = { "label", "v", "v_min", "v_max", "fmt", nullptr };
+    if (!PyArg_ParseTupleAndKeywords(vargs, kwds, "siii|s", argnames, &label, &v, &v_min, &v_max, &fmt))
+        return nullptr;
+    
+    ImGui::SliderInt(label, &v, v_min, v_max, fmt);
+    return Py_BuildValue("i", v);
+}
+
 PyObject* inputFloat(PyObject* self, PyObject* vargs, PyObject* kwds)
 {
     CHECK_IMGUI
