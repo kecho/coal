@@ -66,7 +66,11 @@ bool getModulePath(ModuleState& moduleState, PyObject* moduleObject, std::string
 
         if (PyUnicode_Check(filenameObj))
         {
-            std::wstring wstr = (const wchar_t*)PyUnicode_AS_DATA(filenameObj);
+            Py_ssize_t strLen;
+            wchar_t* tmpRawMem = PyUnicode_AsWideCharString(filenameObj, &strLen);
+            std::wstring wstr = tmpRawMem;
+            if (tmpRawMem)
+                PyMem_Free(tmpRawMem);
             std::string coreModulePath = ws2s(wstr);
             FileUtils::getDirName(coreModulePath, path);
         }
@@ -182,7 +186,11 @@ PyObject* addDataPath(PyObject* self, PyObject* args, PyObject* kwds)
     std::string path;
     if (PyUnicode_Check(object))
     {
-        std::wstring wstr = (const wchar_t*)PyUnicode_AS_DATA(object);
+        Py_ssize_t strLen;
+        wchar_t* tmpRawMem = PyUnicode_AsWideCharString(object, &strLen);
+        std::wstring wstr = tmpRawMem;
+        if (tmpRawMem)
+            PyMem_Free(tmpRawMem);
         path = ws2s(wstr);
     }
     else if (!getModulePath(moduleState, self, path))

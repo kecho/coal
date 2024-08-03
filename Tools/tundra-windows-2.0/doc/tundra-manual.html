@@ -1,9 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
     "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
 <head>
 <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
-<meta name="generator" content="AsciiDoc 8.6.9" />
+<meta name="generator" content="AsciiDoc 9.0.0rc1" />
 <title>The Tundra Build System</title>
 <style type="text/css">
 /* Shared CSS for AsciiDoc xhtml11 and html5 backends */
@@ -435,7 +436,7 @@ thead, p.table.header {
 p.table {
   margin-top: 0;
 }
-/* Because the table frame attribute is overriden by CSS in most browsers. */
+/* Because the table frame attribute is overridden by CSS in most browsers. */
 div.tableblock > table[frame="void"] {
   border-style: none;
 }
@@ -830,7 +831,7 @@ Here is a sample minimal <code>tundra.lua</code> file that creates a configurati
 configuration is to be the default if nothing is specified when Tundra is run
 on Mac OS X:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -859,7 +860,7 @@ string which is taken as a filename.</p></div>
 The output path shows that tundra has defaulted the variant to <code>debug</code> and the
 subvariant to <code>default</code>.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -869,7 +870,7 @@ Program t2-output/macosx-gcc-debug-default/HelloWorld
 <span style="color: #990000">***</span> build success<span style="color: #990000">,</span> <span style="color: #993399">2</span> <span style="font-weight: bold"><span style="color: #0000FF">jobs</span></span> run</tt></pre></div></div>
 <div class="paragraph"><p>The next mandatory step is of course to display the famous greeting:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -897,7 +898,7 @@ useful for DIY installs or to check into source control.</p></div>
 for the unit tests, which must be made available via the Git submodule
 mechanism:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1147,7 +1148,7 @@ sections are a reference of what you can place in the <code>Build</code> block.
 Declarations within the block can appear in any order.</p></div>
 <div class="listingblock">
 <div class="title">Build block synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1188,7 +1189,7 @@ supports. Each configuration is in turn a <code>Config</code> table.</p></div>
 build for that configuration, such as include paths, libraries and so on.</p></div>
 <div class="listingblock">
 <div class="title">Config Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1228,7 +1229,7 @@ configure it. Tools are loaded from the tool directory list.</p></div>
 property in the <code>Build</code> block.</p></div>
 <div class="listingblock">
 <div class="title">Config Tools Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1259,7 +1260,7 @@ include paths (<code>CPPPATH</code>), C preprocessor defines (<code>CPPDEFS</cod
 options (<code>CCOPTS</code>).</p></div>
 <div class="listingblock">
 <div class="title">Config Env Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1278,7 +1279,7 @@ http://www.gnu.org/software/src-highlite -->
 appending them to the environment.</p></div>
 <div class="listingblock">
 <div class="title">Config ReplaceEnv Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1299,7 +1300,7 @@ settings between configs in external tables. These external tables can also
 inherit settings further by applying a new <code>Inherit</code> property.</p></div>
 <div class="listingblock">
 <div class="title">Inherit Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1331,7 +1332,7 @@ cross-compilation where some parts of the build must be built with the target
 compiler and some with the host compiler.</p></div>
 <div class="listingblock">
 <div class="title">Config SubConfigs Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1365,7 +1366,7 @@ variant. A variant consists of a required <code>Name</code> property and an opti
 <code>Options</code> table.</p></div>
 <div class="listingblock">
 <div class="title">Variants synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1390,7 +1391,7 @@ properties, <code>Name</code> and <code>BuildOrder</code>, both of which are req
 ordered with the lowest <code>BuildOrder</code> first.</p></div>
 <div class="listingblock">
 <div class="title">Passes Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1419,7 +1420,7 @@ using a hash of their contents rather than their timestamps. This means you can
 modify their contents to make that happen:</p></div>
 <div class="listingblock">
 <div class="title">ContentDigestExtensions Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1446,7 +1447,7 @@ default.</p></div>
 as there are build threads&#8201;&#8212;&#8201;that is, there&#8217;s no limit.</p></div>
 <div class="listingblock">
 <div class="title">Options Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1478,7 +1479,7 @@ string or a list of patters. The items in the list will then be included only
 when one of the config patterns match:</p></div>
 <div class="listingblock">
 <div class="title">Configuration Filtering</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1492,7 +1493,7 @@ debug builds, and <code>foo-gcc.c</code> is included if the toolset matches <cod
 included.</p></div>
 <div class="listingblock">
 <div class="title">Configuration Filtering Flattening</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1538,7 +1539,7 @@ following keywords:</p></div>
 <div class="paragraph"><p>All these follow the same synopsis:</p></div>
 <div class="listingblock">
 <div class="title">Native Unit Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1585,7 +1586,7 @@ of everyone who links to this library. The propagate block can contain <code>Lib
 <code>Defines</code>, and so on.</p></div>
 <div class="listingblock">
 <div class="title">Native Unit Propagate synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1599,7 +1600,7 @@ http://www.gnu.org/software/src-highlite -->
 <div class="paragraph"><p>For example, to push a define <code>ZLIB_DLL</code> onto users of a library, one might use
 the following:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1639,7 +1640,7 @@ blocks from dependencies will be applied to the depending unit.</p></div>
 specific and thus it is common that every lib is wrapped in a configuration
 block, like this:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1673,7 +1674,7 @@ are supported:</p></div>
 </ul></div>
 <div class="listingblock">
 <div class="title">C# Unit Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1712,7 +1713,7 @@ are supported:</p></div>
 </ul></div>
 <div class="listingblock">
 <div class="title">Rust Unit Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1751,7 +1752,7 @@ fn main() {
 </div></div>
 <div class="paragraph"><p>It is also possible to override the Cargo command line and add flags to rustc</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1786,7 +1787,7 @@ globs and filenames.</p></div>
 <div class="paragraph"><p>Globs come in two versions, <code>Glob</code> and <code>FGlob</code>.</p></div>
 <div class="listingblock">
 <div class="title">Glob Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1803,7 +1804,7 @@ you can disable this behaviour by passing <code>Recursive = false</code>. In thi
 we&#8217;re getting all <code>.c</code> and <code>.cpp</code> files from <code>my_dir</code>.</p></div>
 <div class="listingblock">
 <div class="title">Glob Example</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1819,7 +1820,7 @@ only. <code>FGlob</code> extends <code>Glob</code> and adds a list of filters to
 list has been retrieved:</p></div>
 <div class="listingblock">
 <div class="title">FGlob Synopsis</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1842,7 +1843,7 @@ configuration only, and we&#8217;re tagging files with <code>win32</code> anywhe
 filename for that platform:</p></div>
 <div class="listingblock">
 <div class="title">FGlob Example</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1880,7 +1881,7 @@ particular name or path to either <code>bison</code> or <code>flex</code> so you
 through the environment:</p></div>
 <div class="listingblock">
 <div class="title">Bison/Flex Example</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1916,7 +1917,7 @@ different static libraries, each following the exact same pattern. Rather than
 repeating all those declarations, use a function to remove the duplication:</p></div>
 <div class="listingblock">
 <div class="title">Unit Function Wrapper Example</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -1949,7 +1950,7 @@ library is required. This removes the need to use strings. You should prefer
 this style as it is less error prone and slightly faster.</p></div>
 <div class="listingblock">
 <div class="title">Unit Return Value Example</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2432,7 +2433,7 @@ You can build for multiple target architectures at the same time, for example
 <div class="paragraph"><p>Here&#8217;s an example of how this toolset can be configured for an explicit target
 architecture:</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2538,7 +2539,7 @@ like <code>StaticLibrary</code> and <code>Program</code> are appropriate for the
 <div class="paragraph"><p>Here is a skeleton syntax extension module to start from:</p></div>
 <div class="listingblock">
 <div class="title">Syntax Script Template</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2569,7 +2570,7 @@ typically by calling out to external tools. Here is a simple example, taken
 from the <code>generator-simple</code> example:</p></div>
 <div class="listingblock">
 <div class="title">DefRule example</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2633,7 +2634,7 @@ but can do anything.</p></div>
 <div class="paragraph"><p>To create one, start with this template script:</p></div>
 <div class="listingblock">
 <div class="title">Unit Script Template</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2691,7 +2692,7 @@ underlying layer.</p></div>
 mappings directly to environment data. This is how <code>Defines</code> maps to <code>CPPDEFS</code>
 in the native toolset, for example.</p></div>
 <div class="listingblock">
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2839,7 +2840,7 @@ cellspacing="0" cellpadding="4">
 called for:</p></div>
 <div class="listingblock">
 <div class="title">Unit Usage Example</div>
-<div class="content"><!-- Generator: GNU source-highlight 3.1.8
+<div class="content"><!-- Generator: GNU source-highlight
 by Lorenzo Bettini
 http://www.lorenzobettini.it
 http://www.gnu.org/software/src-highlite -->
@@ -2858,7 +2859,7 @@ http://www.gnu.org/software/src-highlite -->
 <div id="footer">
 <div id="footer-text">
 Last updated
- 2020-10-22 21:46:35 UTC
+ 2023-01-01 21:51:14 UTC
 </div>
 </div>
 </body>

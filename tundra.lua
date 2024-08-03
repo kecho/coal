@@ -15,7 +15,7 @@ Build {
         {
             Name = "win64-msvc",
             DefaultOnHost = "windows",
-            Tools = { "msvc-vs2019"  },
+            Tools = { "msvc-vs2022"  },
             Env = {
                 CPPPATH = {
                     "$(OBJECTDIR)$(SEP)Source"

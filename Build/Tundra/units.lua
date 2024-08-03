@@ -26,6 +26,7 @@ local WinVulkanLibs = WinVulkanDir .. "Lib"
 
 local PythonModuleVersions =
 {
+    _G.WindowsPythonModuleTemplate("cp312-win_amd64", "312", PythonDir),
     _G.WindowsPythonModuleTemplate("cp311-win_amd64", "311", PythonDir),
     _G.WindowsPythonModuleTemplate("cp310-win_amd64", "310", PythonDir),
     _G.WindowsPythonModuleTemplate("cp39-win_amd64",  "39",  PythonDir),
